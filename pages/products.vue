@@ -5,14 +5,10 @@ const { data: products } = await useFetch("/api/products");
 <template>
   <div>
     <h1>Page Products</h1>
-    <Card
-      v-for="product in products.products"
-      :key="product.id"
-      :title="product.title"
-      :thumbnail="product.thumbnail"
-      :description="product.description"
-      :price="product.price"
-    />
+    <div class="grid">
+      <Card
+      v-for="product in products.products" :key="product.id" :="product"/>
+    </div>
   </div>
 </template>
 

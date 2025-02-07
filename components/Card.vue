@@ -1,9 +1,10 @@
 <script lang="ts" setup>
 defineProps({
   title: String,
+  slug: String,
   thumbnail: String,
-  description: String,
-  price: Number
+  price: Number,
+  category: String
 });
 </script>
 
@@ -12,9 +13,8 @@ defineProps({
     <img :src="thumbnail" class="card-img-top" :alt="title" />
     <div class="card-body">
       <h5 class="card-title">{{ title }}</h5>
-      <p class="card-text">{{ description }}</p>
       <p class="card-price">Price: ${{ price }}</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+      <NuxtLink :to="{ name: 'products-category-title', params:{ title: slug,category }}" class="btn btn-primary">More information</NuxtLink>
     </div>
   </div>
 </template>
