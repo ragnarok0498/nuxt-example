@@ -21,5 +21,7 @@
       <label class="form-check-label" for="exampleCheck1">Check me out</label>
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
+    <p class="text-center">Dont have an account? <NuxtLink to="/account/register">Register</NuxtLink></p>
+
   </form>
 </template>

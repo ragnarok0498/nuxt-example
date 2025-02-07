@@ -9,10 +9,6 @@ definePageMeta({
 });
 </script>
 <template>
-  <div>
-    <h1></h1>
-    <h2></h2>
-  </div>
   <div class="card">
     <img src="..." class="card-img-top" alt="..." />
     <div class="card-body">

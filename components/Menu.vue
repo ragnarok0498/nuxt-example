@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-      <NuxtLink :to="{ name: 'index' }" class="navbar-brand">Nuxt 3</NuxtLink>
+      <NuxtLink :to="{ name: 'index' }" class="navbar-brand">Home Nuxt 3</NuxtLink>
       <button
         class="navbar-toggler"
         type="button"
@@ -16,16 +16,13 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <NuxtLink :to="{ name: 'index' }" class="nav-link" active-class="active">Home</NuxtLink>
-          </li>
-          <li class="nav-item">
             <NuxtLink :to="{ name: 'products' }" class="nav-link" active-class="active">Products</NuxtLink>
           </li>
           <li class="nav-item">
-            <NuxtLink :to="{ name: 'contact' }" class="nav-link" active-class="active">Contacto</NuxtLink>
+            <NuxtLink :to="{ name: 'contact' }" class="nav-link" active-class="active">Contact</NuxtLink>
           </li>
           <li class="nav-item">
-            <NuxtLink :to="{ name: 'login' }" class="nav-link" active-class="active">Login</NuxtLink>
+            <NuxtLink :to="{ name: 'account' }" class="nav-link" active-class="active">Account</NuxtLink>
           </li>
         </ul>
       </div>

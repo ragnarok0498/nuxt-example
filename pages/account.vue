@@ -1,9 +1,9 @@
 <template>
-  <section class="bg-light py-3 py-md-5">
+  <section class="bg-light">
     <div class="container">
       <div class="row justify-content-md-center">
         <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
-          <h2 class="mb-4 display-5 text-center">Page home</h2>
+          <h2 class="mb-4 display-5 text-center">Account</h2>
           <p class="text-secondary mb-5 text-center">
             Example proyect with Nuxt3 VueJS
           </p>
@@ -12,4 +12,13 @@
       </div>
     </div>
   </section>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <NuxtPage />
+      </div>
+    </div>
+  </div>
 </template>
+
+<script lang="ts" setup></script>
