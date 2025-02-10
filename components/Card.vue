@@ -1,20 +1,14 @@
 <script lang="ts" setup>
-defineProps({
-  title: String,
-  slug: String,
-  thumbnail: String,
-  price: Number,
-  category: String
-});
+defineProps(['product']);
 </script>
 
 <template>
   <div class="card" style="width: 18rem">
-    <img :src="thumbnail" class="card-img-top" :alt="title" />
+    <img :src="product.thumbnail" class="card-img-top" alt="..." />
     <div class="card-body">
-      <h5 class="card-title">{{ title }}</h5>
-      <p class="card-price">Price: ${{ price }}</p>
-      <NuxtLink :to="{ name: 'products-category-title', params:{ title: slug,category }}" class="btn btn-primary">More information</NuxtLink>
+      <h5 class="card-title">{{ product.title }}</h5>
+      <p class="card-price">Price: ${{ product.price }}</p>
+      <NuxtLink :to="{ name: 'products-category-title', params:{ title: product.title, category: product.category }}" class="btn btn-primary">More information</NuxtLink>
     </div>
   </div>
 </template>

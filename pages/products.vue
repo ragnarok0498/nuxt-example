@@ -1,9 +1,12 @@
-<script lang="ts" setup>
-const { data: products } = await useFetch("/api/products");
+<script setup>
+const { data, error, pending } = await useFetch("https://dummyjson.com/products",{
+    lazy: true,
+    pick: ['products']
+  });
 </script>
 
 <template>
-  <section class="bg-light py-3 py-md-5">
+  <section class="bg-light">
     <div class="container">
       <div class="row justify-content-md-center">
         <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
@@ -16,8 +19,17 @@ const { data: products } = await useFetch("/api/products");
       </div>
     </div>
   </section>
-  <div class="grid">
-    <Card v-for="product in products.products" :key="product.id" :="product" />
+  <div v-if="pending">
+    <div class="d-flex justify-content-center">
+      <div class="spinner-border text-secondary" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+  </div>
+  <div v-else>
+    <div class="grid">
+      <Card v-for="product in data.products" :key="product.id" :product="product" />
+    </div>
   </div>
 </template>
 
