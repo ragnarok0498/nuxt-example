@@ -8,7 +8,14 @@ defineProps(['product']);
     <div class="card-body">
       <h5 class="card-title">{{ product.title }}</h5>
       <p class="card-price">Price: ${{ product.price }}</p>
-      <NuxtLink :to="{ name: 'products-category-title', params:{ title: product.title, category: product.category }}" class="btn btn-primary">More information</NuxtLink>
+      <NuxtLink 
+        :to="{ 
+          name: 'products-category-title', 
+          params: { title: product.title, category: product.category }, 
+          query: { image: product.thumbnail, description: product.description }
+        }" 
+        class="btn btn-primary">More information</NuxtLink>
     </div>
   </div>
 </template>
+

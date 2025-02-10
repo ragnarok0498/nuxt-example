@@ -1,8 +1,7 @@
 <script setup>
-const { data, error, pending } = await useFetch("https://dummyjson.com/products",{
-    lazy: true,
-    pick: ['products']
-  });
+const { data, error, pending } = await useLazyAsyncData('products', () => $fetch('https://dummyjson.com/products'),{
+  pick: ['products']
+})
 </script>
 
 <template>
