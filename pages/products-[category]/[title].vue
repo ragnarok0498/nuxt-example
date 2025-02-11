@@ -29,6 +29,7 @@ const productImage = route.query.image as string;
     <ul class="list-group list-group-flush">
       <li class="list-group-item"><strong>Category:</strong> {{ route.params.category }}</li>
       <li class="list-group-item"><strong>Product:</strong> {{ route.params.title }}</li>
+      <li class="list-group-item"><strong>Price:</strong> {{ route.query.price }}</li>
     </ul>
   </div>
 </template>

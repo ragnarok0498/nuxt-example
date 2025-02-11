@@ -1,6 +1,24 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  css: ['bootstrap/dist/css/bootstrap.min.css'],
-  compatibilityDate: '2024-11-01',
-  devtools: { enabled: true }
-})
+  app: {
+    head: {
+      link: [
+        {
+          rel: 'stylesheet',
+          href: 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css'
+        }
+      ],
+      script: [
+        {
+          src: 'https://code.jquery.com/jquery-3.6.0.min.js',
+          tagPosition: "bodyClose"
+        },
+        {
+          src: 'https://cdn.jsdelivr.net/npm/bootstrap@5/dist/js/bootstrap.bundle.min.js',
+          tagPosition: "bodyClose"
+        }
+      ]
+    }
+  },
+
+  compatibilityDate: '2025-02-11'
+});
